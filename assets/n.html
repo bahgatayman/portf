@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* تنسيقات الكارد الأساسية */
+.card {
+    width: 300px;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* المحتوى الأساسي للكارد */
+.card-content {
+    padding: 16px;
+}
+
+/* الفقاعة المخفية افتراضياً */
+.bubble {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    padding: 16px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    animation: fadeIn 0.3s ease;
+}
+
+.bubble::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+
+/* عند تفعيل الكارد تظهر الفقاعة */
+.card.active .bubble {
+    display: block;
+}
+
+/* تفاصيل داخل الفقاعة */
+.bubble-content {
+    text-align: center;
+}
+
+.bubble-content img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.bubble-content button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.bubble-content button:hover {
+    background-color: #0056b3;
+}
+
+/* تأثير Fade In */
+/* @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="card" onclick="toggleDetails(this)">
+        <div class="card-content">
+            <h2>عنوان الكارد</h2>
+            <p>وصف مختصر...</p>
+        </div>
+        <div class="bubble">
+            <div class="bubble-content">
+                <img src="img/about.jpg" alt="الصورة">
+                <p>تفاصيل إضافية...</p>
+                <button>تفاصيل إضافية</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    
+    <div class="card" onclick="toggleDetails(this)">
+        <div class="card-content">
+            <h2>عنوان الكارد</h2>
+            <p>وصف مختصر...</p>
+        </div>
+        <div class="bubble">
+            <div class="bubble-content">
+                <img src="img/about.jpg" alt="الصورة">
+                <p>تفاصيل إضافية...</p>
+                <button>تفاصيل إضافية</button>
+            </div>
+        </div>
+    </div>
+    <div class="card" onclick="toggleDetails(this)">
+        <div class="card-content">
+            <h2>عنوان الكارد</h2>
+            <p>وصف مختصر...</p>
+        </div>
+        <div class="bubble">
+            <div class="bubble-content">
+                <img src="img/about.jpg" alt="الصورة">
+                <p>تفاصيل إضافية...</p>
+                <button>تفاصيل إضافية</button>
+            </div>
+        </div>
+    </div>
+    <div class="card" onclick="toggleDetails(this)">
+        <div class="card-content">
+            <h2>عنوان الكارد</h2>
+            <p>وصف مختصر...</p>
+        </div>
+        <div class="bubble">
+            <div class="bubble-content">
+                <img src="img/about.jpg" alt="الصورة">
+                <p>تفاصيل إضافية...</p>
+                <button>تفاصيل إضافية</button>
+            </div>
+        </div>
+    </div>
+    <div class="card" onclick="toggleDetails(this)">
+        <div class="card-content">
+            <h2>عنوان الكارد</h2>
+            <p>وصف مختصر...</p>
+        </div>
+        <div class="bubble">
+            <div class="bubble-content">
+                <img src="img/about.jpg" alt="الصورة">
+                <p>تفاصيل إضافية...</p>
+                <button>تفاصيل إضافية</button>
+            </div>
+        </div>
+    </div>
+    <div class="card" onclick="toggleDetails(this)">
+        <div class="card-content">
+            <h2>عنوان الكارد</h2>
+            <p>وصف مختصر...</p>
+        </div>
+        <div class="bubble">
+            <div class="bubble-content">
+                <img src="img/about.jpg" alt="الصورة">
+                <p>تفاصيل إضافية...</p>
+                <button>تفاصيل إضافية</button>
+            </div>
+        </div>
+    </div>
+    <div class="card" onclick="toggleDetails(this)">
+        <div class="card-content">
+            <h2>عنوان الكارد</h2>
+            <p>وصف مختصر...</p>
+        </div>
+        <div class="bubble">
+            <div class="bubble-content">
+                <img src="img/about.jpg" alt="الصورة">
+                <p>تفاصيل إضافية...</p>
+                <button>تفاصيل إضافية</button>
+            </div>
+        </div>
+    </div>
+    <div class="card" onclick="toggleDetails(this)">
+        <div class="card-content">
+            <h2>عنوان الكارد</h2>
+            <p>وصف مختصر...</p>
+        </div>
+        <div class="bubble">
+            <div class="bubble-content">
+                <img src="img/about.jpg" alt="الصورة">
+                <p>تفاصيل إضافية...</p>
+                <button>تفاصيل إضافية</button>
+            </div>
+        </div>
+    </div>
+    <div class="card" onclick="toggleDetails(this)">
+        <div class="card-content">
+            <h2>عنوان الكارد</h2>
+            <p>وصف مختصر...</p>
+        </div>
+        <div class="bubble">
+            <div class="bubble-content">
+                <img src="img/about.jpg" alt="الصورة">
+                <p>تفاصيل إضافية...</p>
+                <button>تفاصيل إضافية</button>
+            </div>
+        </div>
+    </div>
+    <div class="card" onclick="toggleDetails(this)">
+        <div class="card-content">
+            <h2>عنوان الكارد</h2>
+            <p>وصف مختصر...</p>
+        </div>
+        <div class="bubble">
+            <div class="bubble-content">
+                <img src="img/about.jpg" alt="الصورة">
+                <p>تفاصيل إضافية...</p>
+                <button>تفاصيل إضافية</button>
+            </div>
+        </div>
+    </div>
+    <div class="card" onclick="toggleDetails(this)">
+        <div class="card-content">
+            <h2>عنوان الكارد</h2>
+            <p>وصف مختصر...</p>
+        </div>
+        <div class="bubble">
+            <div class="bubble-content">
+                <img src="img/about.jpg" alt="الصورة">
+                <p>تفاصيل إضافية...</p>
+                <button>تفاصيل إضافية</button>
+            </div>
+        </div>
+    </div>
+    <div class="card" onclick="toggleDetails(this)">
+        <div class="card-content">
+            <h2>عنوان الكارد</h2>
+            <p>وصف مختصر...</p>
+        </div>
+        <div class="bubble">
+            <div class="bubble-content">
+                <img src="img/about.jpg" alt="الصورة">
+                <p>تفاصيل إضافية...</p>
+                <button>تفاصيل إضافية</button>
+            </div>
+        </div>
+    </div>
+    <div class="card" onclick="toggleDetails(this)">
+        <div class="card-content">
+            <h2>عنوان الكارد</h2>
+            <p>وصف مختصر...</p>
+        </div>
+        <div class="bubble">
+            <div class="bubble-content">
+                <img src="img/about.jpg" alt="الصورة">
+                <p>تفاصيل إضافية...</p>
+                <button>تفاصيل إضافية</button>
+            </div>
+        </div>
+    </div>
+    
+    
+
+
+    <script>
+function toggleDetails(card) {
+    card.classList.toggle("active"); // إضافة/إزالة كلاس 'active' عند الضغط على الكارد
+}
+
+    </script>
+</body>
+</html>
